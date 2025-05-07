@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+body {
+    font-family: sans-serif;
+    overflow: hidden;
+    background: linear-gradient(90deg, #ff00ff 0%, #cc00cc 12.5%, #800080 25%, #0000ff 37.5%, #008000 50%, #80ff00 62.5%, #ccff00 75%, #ffff00 87.5%, #ff00ff 100%);
+    background-size: 900% 100%;
+    animation: girarCoresSuave 30s linear infinite;
+}
+
+@keyframes girarCoresSuave {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: -800% 0%;
+    }
+}
+
+.popup {
+    position: absolute;
+    background-color: #f0f0f0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-family: "Playfair Display SC", serif;
+    font-size: 10pt;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+}
+
+.popup-inicial {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+}
+
+.popup-inicial .popup-titlebar {
+    background-color: #240080;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    cursor: default;
+}
+
+.popup-inicial .popup-content {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.popup-inicial .popup-icon {
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.popup:not(.popup-inicial) {
+    width: 250px;
+}
+
+.popup:not(.popup-inicial) .popup-titlebar {
+    background-color: #800000;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popup:not(.popup-inicial) .popup-content {
+    padding: 10px;
+    color: red;
+    display: flex;
+    font-family: "Playfair Display SC", serif;
+    align-items: center;
+}
